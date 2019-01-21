@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+// Bug: Typo in importing NavBar file
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import { Glyphicon } from 'react-bootstrap';
 import '../styles/App.css';
-// Import LoginForm component
+// Fix: Import LoginForm component
 import LoginForm from "../components/LoginForm"
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
     this.handleLogin = this.handleLogin.bind(this)
   }
 
+  // Code Improvement
   // Remove usage of refs to call method
   // Fix logic
   handleLogin() {
@@ -43,6 +45,7 @@ class App extends Component {
       <div className='app'>
         <NavBar ref='navbutton' handleLogout={this.handleLogout} showLogoutButton={!showLoginForm}/>
         <div className={showLoginForm === true ? '' : 'hide'}>
+          {/* Bug: Usage of a component without importing */}
           <LoginForm handleLogin={this.handleLogin} />
         </div>
         <div className={showCheckmark === true ? 'text-center mt9x' : 'hide'}>

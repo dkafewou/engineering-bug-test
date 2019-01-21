@@ -42,7 +42,7 @@ class LoginForm extends Component {
               <Col sm={8} className='mt6x'>
                 <button className='flat-button border-gray'
                         type='submit'
-                        onClick={this.props.handleLogin}>Next{/*Get the handleLogin method from props*/}
+                        onClick={this.props.handleLogin}>Next{/*Bug: Calling of undefined function in this scope. Fix: Get the handleLogin method from props*/}
                         <Glyphicon className='pl2x' glyph='menu-right' />
                 </button>
               </Col>

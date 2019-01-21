@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+// Bug: Importing module from wrong path
 // Fix import pathname
 import App from '../containers/App';
 
